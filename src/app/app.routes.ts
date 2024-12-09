@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './_pages/home/home.component';
-import { LoginComponent } from './_pages/login/login.component';
-import { ContatoComponent } from './_pages/contato/contato.component';
-import { MeetingComponent } from './_pages/meeting/meeting.component';
-import { DashboardComponent } from './_pages/dashboard/dashboard.component';
-import { RegisterComponent } from './_pages/register/register.component';
-import { ClientComponent } from './_pages/client/client.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ContatoComponent } from './pages/contato/contato.component';
+import { MeetingComponent } from './pages/meeting/meeting.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ClientComponent } from './pages/client/client.component';
 import { DashboardAuthGuard } from './autenticacao/auth.guard';
 
 export const routes: Routes = [
