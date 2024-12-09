@@ -1,14 +1,31 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./components/navbar/navbar.component";
-import { FooterComponent } from "./components/footer/footer.component";
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AuthService } from './autenticacao/auth.service';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent,],
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-}) 
+  styleUrls: ['./app.component.css']
+})
+
 export class AppComponent {
-  title = 'projeto-teste';
+  // Primeiro Projeto completo em Angular 19 - Turma SENAI
+  title = 'Projeto Angular Advocacia';
+
+  http = inject(HttpClient);
+
+
+  constructor(private authService: AuthService) {}
+
+  logout(): void {
+    this.authService.logout();
+  }
 }

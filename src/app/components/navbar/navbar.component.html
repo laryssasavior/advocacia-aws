@@ -8,23 +8,26 @@
       <div class="collapse navbar-collapse" id="navbarsExample09">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" routerLink="/">Início</a>
+            <a class="nav-link active text-white" aria-current="page" routerLink="/contato">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/contato">Contato</a>
+            <a class="nav-link text-white" routerLink="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled text-white" aria-disabled="true" routerLink="/login">Advogado</a>
+            <a class="nav-link disabled text-white" routerLink="/dashboard">Advogado</a>
           </li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" routerLink="/base" data-bs-toggle="dropdown" aria-expanded="false">Administrativo</a>
+            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="true">Administrativo</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item text-black" routerLink="/login">Área do Cliente</a></li>
               <li><a class="dropdown-item text-black" routerLink="/dashboard">Área Administrativa</a></li>
               <li><a class="dropdown-item text-black" routerLink="/master">Área do Advogado</a></li>
             </ul>
           </li>
+
         </ul>
+
         <form role="search">
           <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
         </form>
