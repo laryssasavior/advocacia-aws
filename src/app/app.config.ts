@@ -5,6 +5,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http'; // Importe 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 
+
 // Configuração do Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCkLSfy2HAVhTKFCONwSmUisX5NR2O_82U",
@@ -19,9 +20,12 @@ const firebaseConfig = {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideHttpClient(withFetch()), // Configuração para usar 'fetch' no HttpClient
+    provideHttpClient(withFetch()), // Configuração para usar 'fetch' no HttpClient para funcionamento do Firebase
     // Não usa importProvidersFrom, mas agora passa diretamente os provedores
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+
   ],
 };
+
+

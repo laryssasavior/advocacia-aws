@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ClientComponent } from './pages/client/client.component';
 import { DashboardAuthGuard } from './autenticacao/auth.guard';
+import { AboutComponent } from './pages/about/about.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent}, // Rota raiz
@@ -14,7 +15,8 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'contato', component: ContatoComponent},
     { path: 'meeting', component: MeetingComponent},  
-    { path: 'dashboard', component: DashboardComponent, canActivate: [DashboardAuthGuard]},
+    { path: 'dashboard', component: DashboardComponent,},
     { path: 'register', component: RegisterComponent },
     { path: 'client', component: ClientComponent},
+    { path: 'about', component: AboutComponent},
 ]

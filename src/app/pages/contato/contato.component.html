@@ -1,1 +1,96 @@
-<p>contato works!</p>
+<div class="contact">
+    <img src="https://i.pinimg.com/736x/c7/86/75/c7867552af832df26f6d877e7edd12e5.jpg" alt="Imagem de Contato" class="contact-image">
+    <h1>Entre em contato agora</h1>
+</div>
+  
+<main>
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-xl-6">
+          <!-- Informações de contato -->
+          <div class="row row-cols-md-2 g-4">
+            <!-- Email -->
+            <div class="aos-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="aos-item__inner">
+                <div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+                  <div class="d-flex justify-content-start">
+                    <i class="fa-solid fa-envelope h3 pe-2"></i>
+                    <span class="h5">Email</span>
+                  </div>
+                  <span>email.com</span>
+                </div>
+              </div>
+            </div>
+            <!-- Telefone -->
+            <div class="aos-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="aos-item__inner">
+                <div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+                  <div class="d-flex justify-content-start">
+                    <i class="fa-solid fa-phone h3 pe-2"></i>
+                    <span class="h5">Telefone</span>
+                  </div>
+                  <span>+55 6199000-9999</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Localização -->
+          <div class="aos-item mt-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="aos-item__inner">
+              <div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+                <div class="d-flex justify-content-start">
+                  <i class="fa-solid fa-location-pin h3 pe-2"></i>
+                  <span class="h5">Localização</span>
+                </div>
+                <span>Avenida Justiça, 123 - Centro, São Paulo - SP, 01234-567</span>
+              </div>
+            </div>
+          </div>
+          <!-- Google Maps -->
+          <div class="aos-item" data-aos="fade-up" data-aos-delay="800">
+            <div class="mt-4 w-100 aos-item__inner">
+              <iframe class="hvr-shadow" width="100%" height="345" frameborder="0" scrolling="no"
+                src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- Formulário de contato -->
+        <div class="col-xl-6">
+          <h2 class="pb-4">Insira sua mensagem</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row g-4">
+              <div class="col-6 mb-3">
+                <label for="firstName" class="form-label">Nome</label>
+                <input type="text" id="firstName" class="form-control" formControlName="firstName">
+              </div>
+              <div class="col-6 mb-3">
+                <label for="lastName" class="form-label">Sobrenome</label>
+                <input type="text" id="lastName" class="form-control" formControlName="lastName">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" formControlName="email">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefone</label>
+              <input type="tel" id="phone" class="form-control" formControlName="phone">
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">Cidade</label>
+              <select id="city" class="form-select" formControlName="city">
+                <option value="Brasília">Brasília</option>
+                <option value="São Paulo">São Paulo</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensagem</label>
+              <textarea id="message" class="form-control" rows="4" formControlName="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  
